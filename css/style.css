@@ -8,6 +8,10 @@
          url('../fonts/OpenSansRegular.svg#OpenSansRegular') format('svg');
 }*/
 
+* {
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -27,11 +31,13 @@ a:hover {
 }
 
 .wrapper {
-	width: 100%;
+	overflow: hidden;
+	position: relative;
+
 }
 
 header {
-	width: 100%;
+
 }
 
 h2 {
@@ -45,13 +51,15 @@ h2 {
 	font-weight: 400;
 }
 
-.top-header {
+.top-header,
+.footer-info,
+.top-footer {
 	background: #4cb1ca;
-	width: 100%;
+	padding: 19px 0;
 }
 
 .holder {
-	width: 1054px;
+	max-width: 1054px;
 	padding: 0px 15px;
 	margin: 0 auto;
 	box-sizing: border-box;
@@ -60,44 +68,42 @@ h2 {
 
 .main-header {
 	background: #fff;
-	width: 100%;
 }
 
-.left-menu {
-	float: left;
-	padding: 19px 0 17px;	
+.top-box {
+	float: left;	
 }
 
-.language, 
-.currency {
+.lang-list, 
+.currency-list {
 	display: inline-block;
 }
 
-.form-left-menu label{
+.form-top-box label{
 	font-size: 13px;
 	line-height: 15px;
 	color: #bef2ff;
 	margin-right: 8px;
 }
 
-.lang-list,
-.curr-list {
+.lang-list select,
+.currency-list select {
 	outline: none;
 	border: none;
 	background-color: transparent;
 	color: #fff;
 }
 
-.user-menu,
-.bottom-menu {
+.login-box,
+.contact-box {
 	margin: 0;
-	padding: 19px 0 17px;
 	list-style: none;
 	float: right;
+	padding: 0;
 }
 
-.user-menu li,
-.bottom-menu li {
+.login-box li,
+.contact-box li {
 	display: inline-block;
 	vertical-align: middle; /*всегда добавлять при inline-block*/
 	margin: 0 7px;
@@ -107,23 +113,26 @@ h2 {
 	font-size: 13px;
 }
 
-.user-menu li a,
-.bottom-menu li a {
+.login-box li a,
+.contact-box li a {
 	color: #fff;
-	display: inline-block;
-	vertical-align: middle;
 	text-decoration: none;
 }
 
-.user-menu li:last-child,
-.bottom-menu li:last-child {
+.login-box li:last-child,
+.contact-box li:last-child {
 	border-right: none;
 	padding-right: 0;
 	margin-right: 0;
 }
 
-.user-menu li a:hover,
-.bottom-menu li a:hover {
+.login-box li:first-child,
+.contact-box li:first-child {
+	margin-left: 0;
+}
+
+.login-box li a:hover,
+.contact-box li a:hover {
 	text-decoration: underline;
 }
 
@@ -182,37 +191,27 @@ h2 {
 	position: relative;
 }
 
-.search-form-box:after {
-	content: "\f002";
-	font-family: 'FontAwesome';
-	font-size: 15px;
-	position: absolute;
-	right: 10px;
-	top: 5px;
-	color: #656565;
-}
-
 .search-form,
 .subscribe-form {	
 	width: 100%;
 }
 
-.search,
-.subscribe {
-	padding: 10px 29px 10px 10px;
-	color: #b7b7b7;
-	font-size: 13px;
-	border: 1px solid #b7b7b7;
+.search-form a{
+	color: #656565;
 }
 
-.search:active,
-.search:focus,
-.subscribe:active,
-.subscribe:focus
- {
+.search-form,
+.subscribe {
+    float: left;
+    border: 1px solid #c6c6c6;
+    padding: 5px;
+    display: inline-block;
+}
+
+.search {
+	border: none;
 	outline: none;
-	border: 1px solid #b7b7b7;
-	box-shadow: none;
+
 }
 
 .cart-box {
@@ -220,39 +219,26 @@ h2 {
 	position: relative;
 }
 
-.mark,
-.cart {
+.btn {
 	width: 35px;
 	height: 35px;
 	border-radius: 50%;
 	background: #7db122;
 	display: inline-block;
-	vertical-align: middle;
+	text-align: center;
 	position: relative;
-}
-
-.mark:after {
-	content: "\f02c";
-	font-family: 'FontAwesome';
-	font-size: 18px;
-	position: absolute;
-	right: 8px;
-	top: 5px;
+	line-height: 32px;
 	color: #fff;
-}
-
-.cart:after {
-	content: "\f07a";
-	font-family: 'FontAwesome';
 	font-size: 20px;
-	position: absolute;
-	right: 9px;
-	top: 3px;
-	color: #fff;
 }
 
 .incart {
+    color: #656565;
+    text-decoration: none;
 	text-transform: uppercase;
+}
+
+.incart {
 	font-weight: 700;
 	display: inline-block;
 	vertical-align: middle;
@@ -306,7 +292,7 @@ h2 {
 }
 
 .products-box,
-.aside-box {
+.aside {
 	float: left;
 }
 
@@ -314,15 +300,11 @@ h2 {
 	width: 78%;
 }
 
-.products {
-	margin-top: 45px;
-}
-
 .products h2 {
 	text-align: left;
 }
 
-.aside-box {
+.aside {
 	width: 22%;
 }
 
@@ -415,7 +397,7 @@ h2 {
 
 .img-holder {
 	background: #eff1f0;
-	height: 228px;
+	height: auto;
 	overflow: hidden;
 	margin-bottom: 10px;
 }
@@ -428,6 +410,7 @@ h2 {
 .description-holder {
 	float: left;
 	display: inline-block;
+	max-width: 75%;
 }
 
 .description-holder p {
@@ -455,17 +438,22 @@ h2 {
 	float: right;
 }
 
-.banner,
-.subscribe-box {
+.aside-box {
 	display: block;
 	width: 100%;
 	box-shadow: 0px 0px 7px 0px rgba(234,234,234,1);
 	-webkit-box-shadow: 0px 0px 7px 0px rgba(234,234,234,1);
 	-moz-box-shadow: 0px 0px 7px 0px rgba(234,234,234,1);
 	box-sizing: border-box;
-	margin-top: 45px;
+	margin-bottom: 45px;
 	padding: 8px;
+	text-align: center;
 	border-top: 4px solid #4cb1ca;
+	overflow: hidden;
+}
+
+.aside-box .slider {
+	margin-bottom: 0;
 }
 
 .btn-cherk-it {
@@ -497,24 +485,28 @@ h2 {
 	position: relative;
 }
 
-.subscribe-box p:after {
-	content: "";
-	width: 85px;
-	border-bottom: 1px solid #ededed;
-	position: absolute;
-	bottom: -32%;
-	right: 30%;
+.subscribe {
+	width: 84%;
+    margin-bottom: 18px;
+    padding: 5px;
+    margin-right: 8%;
+    margin-left: 8%;
+    border: 1px solid #e2e2e2;
+    outline: none;
 }
 
-.subscribe {
-	width: 85%;
-    margin-bottom: 18px;
-    padding: 5px 0;
+.subscribe-form label {
+	border-top: 1px solid #e2e2e2;
+	padding: 0 50% 0 0;
 }
 
 .slider .slide,
 .slider .slide-show {
 	position: relative;
+}
+
+.slider {
+	margin-bottom: 45px;
 }
 
 .slide img {
@@ -611,8 +603,11 @@ h2 {
 }
 
 .slick-dots {
-	padding: 0;
-	margin: 16px 0 6px;
+	padding: 15px 0 24px 0;
+    box-shadow: inset 0px 2px 7px 0px rgba(234,234,234,1);
+	-webkit-box-shadow: inset 0px 2px 7px 0px rgba(234,234,234,1);
+    -moz-box-shadow: inset 0px 2px 7px 0px rgba(234,234,234,1);
+    margin: 16px -30% -11%;
 }
 
 .slick-dots li{
@@ -637,15 +632,19 @@ h2 {
 }
 
 .top-footer {
-	background: #4cb1ca;
-	width: 100%;
+	position: relative;
 }
 
-.delivery,
-.call-us {
+.delivery-box {
 	position: relative;
-	width: 50%;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.delivery-box li {
 	float: left;
+	width: 50%;
 }
 
 .delivery-car,
@@ -657,7 +656,12 @@ h2 {
 	border-radius: 50%;
 	background: #fff;
 	float: left;
-	margin: 20px 20px 20px 0;
+	margin: 0 20px 0 0;
+}
+
+.delivery-car p,
+.telephone p {
+	vertical-align: middle;
 }
 
 .delivery-car:after,
@@ -675,17 +679,6 @@ h2 {
 .telephone:after {
 	content: "\f095";
 	left: 19px;
-}
-
-.delivery p,
-.call-us p {
-	float: left;
-	font-size: 21px;
-	color: #fff;
-	line-height: 21px;
-	padding: 8.2% 0;
-	text-transform: uppercase;
-	margin: 0;
 }
 
 .footer-row {
@@ -800,7 +793,6 @@ h2 {
 .footer-info {
 	background: #0b4b5a;
 	width: 100%;
-	padding: 19px 0;
 }
 
 .copyright,
@@ -816,14 +808,14 @@ h2 {
 	margin: 0;
 }
 
-.bottom-menu {
+.contact-box {
 	padding: 0;
 }
 
-.bottom-menu li {
+.contact-box li {
 	border-right: 1px solid #8adcf0;
 }
 
-.bottom-menu li a {
+.contact-box li a {
 	color: #8adcf0;
 }
