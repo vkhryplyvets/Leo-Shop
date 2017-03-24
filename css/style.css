@@ -916,22 +916,14 @@ h2 {
   .btn-burger {
     display: block;
     position: absolute;
-    top: 10px;
-    right: 30px;
+    top: 2px;
+    right: 26px;
+    font-size: 25px;
     color: #fff;
   }
 
   .main-nav {
     padding: 15px 0;
-  }
-
-  .main-nav,
-  .main-nav-menu,
-  .main-nav-menu ul,
-  .main-nav-menu li
-  .main-nav-menu a {
-    float: none;
-    display: block;
   }
 
   .navbar {
@@ -942,7 +934,7 @@ h2 {
   	margin-right: 0;
   }
 
-.content-holder {
+  .content-holder {
 	padding: 20px 0;
 	margin: 0 42px;
 }
@@ -960,11 +952,7 @@ h2 {
   .login-box {
   	margin-right: 60px;
   }
-
-  .box {
-    min-height: 238px;
-  }
-
+  
   .slick-arrow {
     width: 44px;
     height: 44px;
