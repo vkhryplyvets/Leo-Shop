@@ -197,6 +197,8 @@ h2 {
 .search-form,
 .subscribe-form {	
 	width: 100%;
+	float: left;
+	position: relative;
 }
 
 .search-form a{
@@ -526,7 +528,7 @@ h2 {
 	content: "";
 	border-top: 1px solid #e2e2e2;
 	position: absolute;
-	top: 140px;
+	bottom: 62px;
     left: 0;
     right: 0;
     margin: 0 30%;
@@ -890,6 +892,10 @@ h2 {
   }
 }
 @media screen and (max-width: 980px) {
+
+	h2 {
+		font-size: 20px;
+	}
   .main-header {
     padding-left: 20px;
     padding-right: 20px;
@@ -952,7 +958,7 @@ h2 {
   .login-box {
   	margin-right: 60px;
   }
-  
+
   .slick-arrow {
     width: 44px;
     height: 44px;
@@ -962,6 +968,29 @@ h2 {
   .slick-arrow.slick-next:after {
     font-size: 42px;
     line-height: 44px;
+  }
+
+  .delivery-box {
+  	margin: 0 auto;
+    width: 60%;
+  }
+
+  .delivery-box li {
+  	width: 100%;
+  	padding: 0 0 21px 70px;
+  }
+
+  .top-footer {
+  	padding-bottom: 0;
+  }
+
+  .delivery-box li i {
+  	top: 0;
+  }
+
 }
 
+@media screen and (max-width: 768px) {
+ 
+ 
 }
