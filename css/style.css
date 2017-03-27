@@ -992,10 +992,6 @@ h2 {
   	padding-bottom: 0;
   }
 
-  .delivery-box li i {
-  	top: 0;
-  }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -1133,9 +1129,7 @@ h2 {
 }
 
 @media screen and (max-width: 480px) {
-	
-
-  .item {
+ .item {
   	width: 45%;
     margin: 20px 2%;
   }
@@ -1150,26 +1144,26 @@ h2 {
 
   .aside-box {
     width: 51%;
-}
+    }
 
   .footer-column {
 	width: 100%;
-}
+	}
 
   .mobile-nav {
 	width: 250px;
-}
+	}
 
   .mobile li {
 	display: block;
 	border: none;
 	margin: 0;
 	padding: 6px 20px;
-}
+	}
 
   .login-box li:last-child, .contact-box li:last-child {
 	padding-right: 20px;
-}
+	}
 
   .navbar {
   	float: none;
@@ -1178,17 +1172,17 @@ h2 {
   .navbar li {
 	margin: 0;
 	display: block;
-}
+	}
 
   .content-holder {
     padding: 0;
     margin: 0;
     float: none;
-}
+    }
 
-.search-form {
+  .search-form {
 	float: none;
-}
+	}
 
   .search-form a {
   	float: right;
@@ -1196,8 +1190,7 @@ h2 {
 
   .search {
   	width: 80%;
-
-}
+  }
 
   .search-form-box {
   	float: none;
@@ -1209,5 +1202,59 @@ h2 {
   	float: none;
   	text-align: center;
   }
+}
+
+@media screen and (max-width: 480px) {
+	.mobile {
+		margin-bottom: 15px;
+	}
+
+	.mobile li {
+		padding: 3px 20px;
+	}
+
+	.navbar {
+		padding: 0;
+		margin-bottom: 15px;
+	}
+
+	.add-to-cart {
+		padding: 2px 6px;
+		font-size: 20px;
+	}
+
+	.description-holder {
+	    max-width: 60%;
+	  }
+
+	.description-holder p {
+		margin: 8px 0 10px 0;
+	}
+
+	.description-holder p:first-child {
+		display: none;
+	}
+
+	.aside-box {
+    width: 80%;
+  }
+
+  .delivery-box li {
+    font-size: 12px;
+}
+  .delivery-box li i {
+  	width: 55px;
+  	height: 55px;
+  	line-height: 55px;
+  }
+
+  .delivery-box li {
+    padding: 0 0 10px 70px;
+}
+
+.footer-column ul,
+.footer-column h2 {
+	padding: 0;
+}
 
 }
