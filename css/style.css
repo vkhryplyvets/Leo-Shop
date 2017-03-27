@@ -890,6 +890,10 @@ h2 {
     margin: 0;
     left: 12%;
   }
+
+  .mobile {
+  	display: none;
+  }
 }
 @media screen and (max-width: 980px) {
 
@@ -910,9 +914,13 @@ h2 {
     background: #fff;
     padding: 20px;
     z-index: 999;
-    margin-top: 103px;
+    margin-top: 40px;
     transform: translateX(100%);
     transition: all .3s ease-in-out;
+  }
+
+  .login-box {
+  	color: #656565;
   }
 
   .open .mobile-nav {
@@ -927,6 +935,11 @@ h2 {
     font-size: 25px;
     color: #fff;
   }
+
+   .btn-burger:after {
+   	content: "";
+   	z-index: 999;
+   }
 
   .main-nav {
     padding: 15px 0;
@@ -945,14 +958,9 @@ h2 {
 	margin: 0 42px;
 }
 
-.logo {
-	float: none;
+  .logo {
 	display: block;
 	margin: 0;
-}
-
-.logo img {
-	margin: 0 auto;
 }
 
   .login-box {
@@ -991,6 +999,215 @@ h2 {
 }
 
 @media screen and (max-width: 768px) {
+
+ .login-box {
+ 	display: none;
+ }
  
- 
+ .mobile {
+ 	display: block;
+ 	float: none;
+ 	text-align: center;
+ 	margin: 0;
+ }
+
+ .mobile li a {
+ 	color: #656565;
+ }
+
+ .mobile li {
+ 	border-right: 1px solid #656565;
+ }
+
+ .navigation {
+ 	float: none;
+ 	text-align: center;
+ 	overflow: hidden;
+ }
+
+ .slick-arrow {
+ 	display: none !important;
+ }
+
+ .slide .text-block .title {
+ 	font-size: 20px;
+ }
+
+ .slide .text-block span:first-child {
+ 	font-size: 20px;
+ }
+
+ .slide .text-block span {
+ 	padding: 0 10px;
+ 	line-height: 45px;
+ }
+
+ .products-box {
+ 	width: 100%;
+ }
+
+ .aside {
+ 	width: 100%;
+ 	text-align: center;
+ }
+
+ .aside-box {
+ 	width: 32%;
+ 	margin-right: 1%;
+    vertical-align: top;
+    display: inline-block;
+ }
+
+ .delivery-box li {
+ 	font-size: 18px;
+ }
+
+ .footer-row {
+ 	text-align: center;
+ 	padding: 40px 0 0;
+ }
+
+ .footer-column {
+ 	width: 35%;
+ 	margin: 0;
+ 	margin: 0 5% 60px;
+    display: inline-block;
+    vertical-align: top;
+    float: none;
+    text-align: left;
+ }
+
+ .contact-box,
+ .copyright {
+ 	float: none;
+ 	text-align: center;
+ 	padding: 5px 0;
+ 	width: 100%;
+ }
+
+}
+
+@media screen and (max-width: 768px) {
+  .item {
+   width: 30%;
+   margin: 20px 1.5%;
+  }
+
+  .delivery-box {
+  	width: 55%;
+  }
+
+  .aside {
+  	float: none;
+  	width: 60%;
+  	margin: 0 auto;
+  }
+
+  .aside-box {
+  	width: 48%;
+  }
+
+  .footer-row .footer-column:first-child,
+  .footer-row .footer-column:nth-child(2) {
+  	display: none;
+  }
+
+  .footer-column {
+  	width: 35%;
+  	margin: 0 auto;
+  	margin-bottom: 40px;
+  	text-align: center;
+  }
+
+  .footer-column h2 {
+  	text-align: center;
+  }
+
+  .contacts li:last-child {
+    margin: 0 25px 18px 25px;
+}
+
+  .socials {
+  	float: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+	
+
+  .item {
+  	width: 45%;
+    margin: 20px 2%;
+  }
+
+  .delivery-box {
+  	width: 100%;
+  }
+
+  .aside {
+  	width: 100%;
+  }
+
+  .aside-box {
+    width: 51%;
+}
+
+  .footer-column {
+	width: 100%;
+}
+
+  .mobile-nav {
+	width: 250px;
+}
+
+  .mobile li {
+	display: block;
+	border: none;
+	margin: 0;
+	padding: 6px 20px;
+}
+
+  .login-box li:last-child, .contact-box li:last-child {
+	padding-right: 20px;
+}
+
+  .navbar {
+  	float: none;
+  	padding: 30px 0 20px;
+  }
+  .navbar li {
+	margin: 0;
+	display: block;
+}
+
+  .content-holder {
+    padding: 0;
+    margin: 0;
+    float: none;
+}
+
+.search-form {
+	float: none;
+}
+
+  .search-form a {
+  	float: right;
+  }
+
+  .search {
+  	width: 80%;
+
+}
+
+  .search-form-box {
+  	float: none;
+  	margin: 0 auto;
+  	margin-bottom: 20px;
+  }
+
+  .cart-box {
+  	float: none;
+  	text-align: center;
+  }
+
 }
