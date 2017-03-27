@@ -1132,6 +1132,7 @@ h2 {
  .item {
   	width: 45%;
     margin: 20px 2%;
+    vertical-align: top;
   }
 
   .delivery-box {
