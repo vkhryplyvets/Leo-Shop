@@ -1247,6 +1247,15 @@ h2 {
 		margin-bottom: 15px;
 	}
 
+	.top-box {
+		width: 80%;
+	}
+
+	.lang-list,
+	.currency-list {
+		margin: 0 0 10px;
+	}
+
 	.mobile li {
 		padding: 3px 20px;
 	}
@@ -1303,4 +1312,12 @@ h2 {
 	.footer-column h2 {
 		padding: 0 !important;
 	}
+
+	.copyright {
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
 }
+
+
+
